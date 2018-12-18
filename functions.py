@@ -512,3 +512,9 @@ def TL_find_Up_epsilon(epsilon_r):
 
     return u_p
 
+############################################################################################################################### 
+## Lossless case
+## Find characteristic impedance Z_0 with L' and C'. Ulaby s. 89
+def TL_find_Z0_LpCp(Lp, Cp):
+    Z_0 = np.sqrt(Lp, Cp)
+    return Z_0
