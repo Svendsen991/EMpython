@@ -6,7 +6,7 @@ This python lib can be used freely but it's build for solving problems in course
 
 ### Literature
   
-  - Fundamentals of Applied Electromagnetics, Fawwaz T. Ulaby, Umberto Ravaioli. Referred as Ulaby 
+  - Fundamentals of Applied Electromagnetics, Fawwaz T. Ulaby, Umberto Ravaioli. Referred as **Ulaby** 
 
   - [Class pictures link 1](https://www.dropbox.com/sh/mmwt50c62wx66n8/AAAk9syV4ZdBt49FdrQ1KfLya?dl=0)
   
@@ -25,7 +25,7 @@ This python lib can be used freely but it's build for solving problems in course
 
 1. ## printJSON.py
 
-    > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
+    Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
   
   - #### constants()
 
@@ -47,13 +47,31 @@ This python lib can be used freely but it's build for solving problems in course
 
     > Returns speed of light
 
+</br>
+
+2. ## prefix.py
+
+    Returns magnitude for easy convertion to meter.
+    
+    - E_exa()
+    - P_peta()
+    - T_tera()
+    - G_giga()
+    - M_mega()
+    - k_kilo()
+    - m_milli()
+    - mu_micro()
+    - n_nano()
+    - p_pico()
+    - f_femto()
+    - a_atto()
 
 </br>
 
 
-2. ## functions.py
+3. ## functions.py
 
-    > Helpful functions 
+    Helpful functions 
   
   - ### Transmision line
 
