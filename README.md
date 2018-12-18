@@ -42,7 +42,7 @@ This python lib can be used freely but it's build for solving problems in course
 
     > Helpful functions 
 
-  - getPolarization(E_0real, E_0imag)
+  - **getPolarization(E_0real, E_0imag)**
 
     **Input**
       > E_0real and E_0imag are real vectors
@@ -54,7 +54,7 @@ This python lib can be used freely but it's build for solving problems in course
 
       > Else returns bool False
   
-  - getRightOrLeftPolE_field(E_0real, E_0imag, betaVec)
+  - ### getRightOrLeftPolE_field(E_0real, E_0imag, betaVec)
 
      **Input**
       > E_0real, E_0imag and betaVec are real vectors
