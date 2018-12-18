@@ -559,3 +559,13 @@ def TL_find_Lprime_muAB(mu_r, a, b):
 def TL_find_Gprime_sigmaAB(sigma, a, b):
     Gprime = (2 * np.pi * sigma) / np.log(b / a)
     return Gprime 
+
+############################################################################################################################### 
+## General coaxial case
+## Find C' with epsilon (insulator), a and b. Ulaby s. 76
+def TL_find_Cprime_epsilonAB(epsilon_r, a, b):
+    epsilon_0 = printJSON.getEpsilon_0()
+    epsilon = epsilon_0 * epsilon_r
+    
+    Cprime = (2 * np.pi * epsilon) / np.log(b / a)
+    return Cprime 

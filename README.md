@@ -117,6 +117,12 @@ This python lib can be used freely but it's build for solving problems in course
 
           > TL_find_Gprime_sigmaAB(sigma, a, b)
     
+    11. #### Find C' with epsilon (insulator), a and b. Ulaby s. 76
+
+      - General coaxial case
+
+          > TL_find_Cprime_epsilonAB(epsilon_r, a, b)
+    
 
   - #### getPolarization(E_0real, E_0imag)
 
