@@ -6,14 +6,16 @@ This python lib can be used freely but it's build for solving problems in course
 
 
 **Install python 3 and pip**
-> sudo apt install python3 python3-pip
+⋅⋅⋅ > sudo apt install python3 python3-pip
 
 **Install numpy**
-> pip3 install numpy
+⋅⋅⋅ > pip3 install numpy
 
-1. **printJSON.py **
+***
 
-  > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
+1. **printJSON.py**
+
+⋅⋅⋅  > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
   
   - **constants()**
 
