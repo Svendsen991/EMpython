@@ -77,43 +77,43 @@ This python lib can be used freely but it's build for solving problems in course
 
     1. #### Find characteristic impedance Z_0 with R', G', L', C' and omega. Ulaby s. 89
     
-      - General case
+        - General case
 
           > TL_find_Z0_RpGpLpCpOmega(Rp, Gp, Lp, Cp, omega)
 
     2. #### Find u_p Phase velocity with omega and beta. Ulaby s. 89
 
-      - General case
+        - General case
 
           > TL_find_Up_OmegaBeta(omega, beta)
 
     3. #### Find Propagation constant (gamma = alpha + j*beta) with R', G', L', C' and omega. Ulaby s. 89
 
-      - General case
+        - General case
 
           > TL_find_smallGamma_RpGpLpCp(Rp, Gp, Lp, Cp, omega)
     
     4. #### Find beta with omega and epsilon. Ulaby s. 89 and omega. Ulaby s. 89
 
-      - Lossless case
+        - Lossless case
 
           > TL_find_beta_omegaEpsilon(omega, epsilon_r)
 
     4. #### Find u_p Phase velocity with epsilon. Ulaby s. 89
 
-      - Lossless case
+        - Lossless case
 
           > TL_find_Up_epsilon(epsilon_r)
     
     5. #### Find characteristic impedance Z_0 with L' and C'. Ulaby s. 89
 
-      - Lossless case
+        - Lossless case
 
           > TL_find_Z0_LpCp(Lp, Cp)
 
     5. #### Find characteristic impedance Z_0 with epsilon, a (inner radius) and b (outer radius). Ulaby s. 89
 
-      - Lossless coaxial
+        - Lossless coaxial
 
           > TL_find_Z0_epsilonAB(epsilon_r, a, b)
     
@@ -121,34 +121,43 @@ This python lib can be used freely but it's build for solving problems in course
 
     7. #### Find R's with frequency, mu of conductor and sigma of conductor. Ulaby s. 76
 
-      - General case
+        - General case
 
           > TL_find_Rs_freqMucSigmac(freq, mu_c, sigma_c)
     
     8. #### Find R' with R's, a and b. Ulaby s. 76
 
-      - General coaxial case
+        - General coaxial case
 
           > TL_find_Rprime_RsAB(Rs, a, b)
     
     9. #### Find L' with mu (insulator), a and b. Ulaby s. 76
 
-      - General coaxial case
+        - General coaxial case
 
           > TL_find_Lprime_muAB(mu_r, a, b)
     
     10. #### Find G' with sigma (insulator), a and b. Ulaby s. 76
 
-      - General coaxial case
+        - General coaxial case
 
           > TL_find_Gprime_sigmaAB(sigma, a, b)
     
     11. #### Find C' with epsilon (insulator), a and b. Ulaby s. 76
 
-      - General coaxial case
+        - General coaxial case
 
           > TL_find_Cprime_epsilonAB(epsilon_r, a, b)
     
+  - ### Plane wave propagation
+
+    1. #### Find betahat vector with E_field and H_field. Ulaby s. 369
+
+        - Plane-wave case !!**Only returns beta hat vector**!!
+          
+          > find_betaHatVec_EfieldHfield(E_field, H_field)
+
+
 
   - #### getPolarization(E_0real, E_0imag)
 
