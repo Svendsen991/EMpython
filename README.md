@@ -14,23 +14,23 @@ This python lib can be used freely but it's build for solving problems in course
 </br>
 ***
 
-1. **printJSON.py**
+1. ### printJSON.py
 
     > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
   
-  - **constants()**
+  - ##### constants()
 
     Prints constant table
   
-  - **meterials()**
+  - ##### meterials()
 
     Prints material table
 
-  - **getMu_0()**
+  - ##### getMu_0()
 
     Returns mu zero
 
-  - **getEpsilon_0()**
+  - ##### getEpsilon_0()
 
     Returns epsilon zero
 
@@ -38,42 +38,42 @@ This python lib can be used freely but it's build for solving problems in course
 </br>
 
 
-2. **functions.py**
+2. ### functions.py
 
     > Helpful functions 
 
-  - **getPolarization(E_0real, E_0imag)**
+  - ##### getPolarization(E_0real, E_0imag)
 
-    **Input**
+    ###### Input
       > E_0real and E_0imag are real vectors
 
       > Should also work with H_0real and H_0imag as well
       
-    **Output** 
+    ###### Output
       > Returns polarization
 
       > Else returns bool False
   
-  - ### getRightOrLeftPolE_field(E_0real, E_0imag, betaVec)
+  - ##### getRightOrLeftPolE_field(E_0real, E_0imag, betaVec)
 
-     **Input**
+     ###### Input
       > E_0real, E_0imag and betaVec are real vectors
 
       > Only works with Electric field
       
-    **Output** 
+    ###### Output
       > Returns left or right polarization
 
       > Else returns error message
   
   - getRightOrLeftPolH_field(H_0real, H_0imag, betaVec)
 
-     **Input**
+     ###### Input
       > H_0real, H_0imag and betaVec are real vectors
 
       > Only works with Magnetic field
       
-    **Output** 
+    ###### Output
       > Returns left or right polarization
 
       > Else returns error message
