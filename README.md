@@ -117,33 +117,31 @@ This python lib can be used freely but it's build for solving problems in course
 
           > TL_find_Z0_epsilonAB(epsilon_r, a, b)
     
-    6. #### Find R', G', L' and C'. Ulaby s. 76
-
-    7. #### Find R's with frequency, mu of conductor and sigma of conductor. Ulaby s. 76
+    6. #### Find R's with frequency, mu of conductor and sigma of conductor. Ulaby s. 76
 
         - General case
 
           > TL_find_Rs_freqMucSigmac(freq, mu_c, sigma_c)
     
-    8. #### Find R' with R's, a and b. Ulaby s. 76
+    7. #### Find R' with R's, a and b. Ulaby s. 76
 
         - General coaxial case
 
           > TL_find_Rprime_RsAB(Rs, a, b)
     
-    9. #### Find L' with mu (insulator), a and b. Ulaby s. 76
+    8. #### Find L' with mu (insulator), a and b. Ulaby s. 76
 
         - General coaxial case
 
           > TL_find_Lprime_muAB(mu_r, a, b)
     
-    10. #### Find G' with sigma (insulator), a and b. Ulaby s. 76
+    9. #### Find G' with sigma (insulator), a and b. Ulaby s. 76
 
         - General coaxial case
 
           > TL_find_Gprime_sigmaAB(sigma, a, b)
     
-    11. #### Find C' with epsilon (insulator), a and b. Ulaby s. 76
+    10. #### Find C' with epsilon (insulator), a and b. Ulaby s. 76
 
         - General coaxial case
 
