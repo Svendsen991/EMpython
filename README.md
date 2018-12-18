@@ -53,7 +53,7 @@ This python lib can be used freely but it's build for solving problems in course
     
       - General case
 
-          > TL_find_Z0_RpGpLpCp(Rp, Gp, Lp, Cp, omega)
+          > TL_find_Z0_RpGpLpCpOmega(Rp, Gp, Lp, Cp, omega)
 
     2. #### Find u_p Phase velocity with omega and beta. Ulaby s. 89
 

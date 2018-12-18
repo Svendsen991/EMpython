@@ -466,7 +466,7 @@ def findReceivedPower_dB(gainT_dB, gainR_dB, Lambda, R, Pt):
 ############################################################################################################################### 
 ## General case
 ## Find characteristic impedance Z_0 with R', G', L', C' and omega. Ulaby s. 89
-def TL_find_Z0_RpGpLpCp(Rp, Gp, Lp, Cp, omega):
+def TL_find_Z0_RpGpLpCpOmega(Rp, Gp, Lp, Cp, omega):
     Z_0 = np.sqrt((Rp + 1.j * omega * Lp) / (Gp + 1.j * omega * Cp))
     return Z_0
 
@@ -529,7 +529,7 @@ def TL_find_Z0_epsilonAB(epsilon_r, a, b):
 ## General case
 ## Find R's with frequency, mu of conductor and sigma of conductor. Ulaby s. 76
 def TL_find_Rs_freqMucSigmac(freq, mu_c, sigma_c):
-    mu_0 = printJSON.getMu_0
+    mu_0 = printJSON.getMu_0()
     mu = mu_0 * mu_c
 
     R_s = np.sqrt(np.pi * freq * mu / sigma_c)
