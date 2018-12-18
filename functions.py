@@ -5,6 +5,8 @@
 ##  Last edit:  20/11-2018
 
 import numpy as np
+## Get constants
+import printJSON
 
 ##                                                                                                              Polarization
 ###############################################################################################################################
@@ -457,4 +459,56 @@ def findReceivedPower_dB(gainT_dB, gainR_dB, Lambda, R, Pt):
     Prec = factor * sq
     return Prec 
 
+
+
+
+
+
+
+
+##                                                                                                              Transmission line
+############################################################################################################################### 
+## General case
+## Find characteristic impedance Z_0 with R', G', L', C' and omega. Ulaby s. 89
+def TL_find_Z0_RpGpLpCp(Rp, Gp, Lp, Cp, omega):
+    Z_0 = np.sqrt((Rp + 1.j * omega * Lp) / (Gp + 1.j * omega * Cp))
+    return Z_0
+
+############################################################################################################################### 
+## General case
+## Find u_p Phase velocity with omega and beta. Ulaby s. 89
+def TL_find_Up_OmegaBeta(omega, beta):
+    u_p = omega / beta
+    return u_p
+
+############################################################################################################################### 
+## General case
+## Find Propagation constant (gamma = alpha + j*beta) with R', G', L', C' and omega. Ulaby s. 89
+def TL_find_smallGamma_RpGpLpCp(Rp, Gp, Lp, Cp, omega):
+    smallGamma = np.sqrt((Rp + 1.j * omega * Lp) * (Gp + 1.j * omega * Cp))
+    return smallGamma
+
+############################################################################################################################### 
+## Lossless case
+## Find beta with omega and epsilon. Ulaby s. 89
+def TL_find_beta_omegaEpsilon(omega, epsilon_r):
+    epsilon_0 = printJSON.getEpsilon_0()
+    epsilon = epsilon_0 * epsilon_r
+    c = printJSON.getSpeedOfLight()
+
+    beta = omega * np.sqrt(epsilon) / c 
+
+    return beta
+
+############################################################################################################################### 
+## Lossless case
+## Find u_p Phase velocity with epsilon. Ulaby s. 89
+def TL_find_Up_epsilon(epsilon_r):
+    epsilon_0 = printJSON.getEpsilon_0()
+    epsilon = epsilon_0 * epsilon_r
+    c = printJSON.getSpeedOfLight()
+
+    u_p = c / np.sqrt(epsilon)
+
+    return u_p
 

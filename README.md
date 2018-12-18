@@ -34,6 +34,10 @@ This python lib can be used freely but it's build for solving problems in course
   - ##### getEpsilon_0()
 
     > Returns epsilon zero
+  
+  - ##### getSpeedOfLight()
+
+    > Returns speed of light
 
 
 </br>
@@ -42,6 +46,39 @@ This python lib can be used freely but it's build for solving problems in course
 2. ### functions.py
 
     > Helpful functions 
+  
+  - #### Transmisionline
+
+    1. ##### Find characteristic impedance Z_0 with R', G', L', C' and omega. Ulaby s. 89
+    
+      - General case
+
+      > TL_find_Z0_RpGpLpCp(Rp, Gp, Lp, Cp, omega)
+
+    2. ##### Find u_p Phase velocity with omega and beta. Ulaby s. 89
+
+      - General case
+
+      > TL_find_Up_OmegaBeta(omega, beta)
+
+    3. ##### Find Propagation constant (gamma = alpha + j*beta) with R', G', L', C' and omega. Ulaby s. 89
+
+      - General case
+
+      > TL_find_smallGamma_RpGpLpCp(Rp, Gp, Lp, Cp, omega)
+    
+    4. ##### Find beta with omega and epsilon. Ulaby s. 89 and omega. Ulaby s. 89
+
+      - Lossless case
+
+      > TL_find_beta_omegaEpsilon(omega, epsilon_r)
+
+    4. ##### Find u_p Phase velocity with epsilon. Ulaby s. 89
+
+      - Lossless case
+
+      > TL_find_Up_epsilon(epsilon_r)
+
 
   - ##### getPolarization(E_0real, E_0imag)
 

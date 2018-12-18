@@ -16,7 +16,7 @@ def meterials():
     with open("materials.json", "r") as material_file:
         data = json.load(material_file)
     for i in data['material']:
-        print(i, ":\n\tμ_0:", data['material'][i]['permeability'], "\n\tε_0:", data['material'][i]['permittivity'])
+        print(i, ":\n\tmu_0:", data['material'][i]['permeability'], "\n\tepsilon_0:", data['material'][i]['permittivity'])
 
 def getMu_0():
     with open("materials.json", "r") as material_file:
@@ -27,4 +27,9 @@ def getEpsilon_0():
     with open("materials.json", "r") as material_file:
         data = json.load(material_file)
     return data['GetMu0AndEpsilon0']['Epsilon_0']
+
+def getSpeedOfLight():
+    with open("materials.json", "r") as material_file:
+        data = json.load(material_file)
+    return data['Constants']['Speed of light in vacuum']['Value']
     
