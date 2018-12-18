@@ -463,9 +463,6 @@ def findReceivedPower_dB(gainT_dB, gainR_dB, Lambda, R, Pt):
 
 
 
-
-
-
 ##                                                                                                              Transmission line
 ############################################################################################################################### 
 ## General case
@@ -529,3 +526,37 @@ def TL_find_Z0_epsilonAB(epsilon_r, a, b):
     Z_0 = 60 * np.sqrt(epsilon) * np.log(b / a) # OBS np.log is ln. 
     return Z_0
     
+############################################################################################################################### 
+## General case
+## Find R's with frequency, mu of conductor and sigma of conductor. Ulaby s. 76
+def TL_find_Rs_freqMucSigmac(freq, mu_c, sigma_c):
+    mu_0 = printJSON.getMu_0
+    mu = mu_0 * mu_c
+
+    R_s = np.sqrt(np.pi * freq * mu / sigma_c)
+    return R_s
+
+############################################################################################################################### 
+## General coaxial case
+## Find R' with R's, a and b. Ulaby s. 76
+def TL_find_Rprime_RsAB(Rs, a, b):
+    Rprime = (Rs / (2* np.pi)) * ((1 / a) + (1 / b))
+
+    return Rprime 
+
+############################################################################################################################### 
+## General coaxial case
+## Find L' with mu (insulator), a and b. Ulaby s. 76
+def TL_find_Lprime_muAB(mu_r, a, b):
+    mu_0 = printJSON.getMu_0()
+    mu = mu_0 * mu_r
+
+    Lprime = (mu / (2 * np.pi)) * np.log(b / a)
+    return Lprime 
+
+############################################################################################################################### 
+## General coaxial case
+## Find G' with sigma (insulator), a and b. Ulaby s. 76
+def TL_find_Gprime_sigmaAB(sigma, a, b):
+    Gprime = (2 * np.pi * sigma) / np.log(b / a)
+    return Gprime 
