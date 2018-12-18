@@ -21,40 +21,95 @@
         "Air": {
             "permeability": 1.000004,
             "permittivity":1.0006},
-        "aluminum": {
+        "Aluminum": {
             "permeability":1.00002,
             "permittivity":1},
-        "tungsten":{
+        "Tungsten":{
             "permeability":1.00008,
             "permittivity":1},
-        "titanium":{
+        "Titanium":{
             "permeability":1.0002,
             "permittivity":1},
-        "platinum":{
+        "Platinum":{
             "permeability":1.0003,
             "permittivity":1},
-        "cobalt":{
+        "Cobalt":{
             "permeability":250,
             "permittivity":1},
-        "nickel":{
+        "Nickel":{
             "permeability":600,
             "permittivity":1},
-        "steel":{
+        "Steel":{
             "permeability":2000,
             "permittivity":1},
-        "iron":{
+        "Iron":{
             "permeability":4500,
             "permittivity":1},
-        "silicon iron":{
+        "Silicon iron":{
             "permeability":7000,
             "permittivity":1},
-        "mumetal":{
+        "Mumetal":{
             "permeability":100000,
             "permittivity":1},
-        "purified iron":{
+        "Purified iron":{
             "permeability":200000,
             "permittivity":1}
+    },
+    "Constants":{
+        "Speed of light in vacuum":{
+            "Symbol":"c",
+            "Value":"2.998*10**8",
+            "SI unit":"m/s"
+        },
+        "Gravitational constant":{
+            "Symbol":"G",
+            "Value":"6.67*10**(-11)",
+            "SI unit":"N*m^2/kg^2"
+        },
+        "Boltzmann’s constant":{
+            "Symbol":"K",
+            "Value":"1.38*10**(−23)",
+            "SI unit":"J/K"
+        },
+        "Elementary charge":{
+            "Symbol":"e",
+            "Value":"8.85*10**(−12)",
+            "SI unit":"C"
+        },
+        "Permittivity of free space":{
+            "Symbol":"ε_0",
+            "Value":"8.85*10**(−12)",
+            "SI unit":"F/m"
+        },
+        "Permeability of free space":{
+            "Symbol":"μ_0",
+            "Value":"4π * 10**(-7)",
+            "SI unit":"H/m"
+        },
+        "Electron mass":{
+            "Symbol":"m_e",
+            "Value":"9.11*10**(−31)",
+            "SI unit":"kg"
+        },
+        "Proton mass":{
+            "Symbol":"m_p",
+            "Value":"1.67*10**(−27)",
+            "SI unit":"kg"
+        },
+        "Planck’s constant":{
+            "Symbol":"h",
+            "Value":"6.63*10**(−34)",
+            "SI unit":"J*s"
+        },
+        "Intrinsic impedance of free space":{
+            "Symbol":"η_0",
+            "Value":"376.7",
+            "SI unit":"OMEGA"
+        }
+    },
+    "GetMu0AndEpsilon0":{
+        "Mu_0":1.2566370614359173e-06,
+        "Epsilon_0":8.854e-12
     }
-    
 }
 
