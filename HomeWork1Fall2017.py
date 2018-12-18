@@ -45,3 +45,9 @@ print("Beta: ", beta)
 # c)
 
 print("Alpha: ", alpha)
+
+# d)
+
+waveLength = func.findLambdaWaveLenght(freq, mu_r, epsilon_r)
+
+print("Lambda: ", waveLength)

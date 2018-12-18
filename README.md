@@ -4,6 +4,14 @@ This python lib can be used freely but it's build for solving problems in course
 
 ## 31035 Anvendt elektromagnetisme
 
+### Literature
+  
+  - Fundamentals of Applied Electromagnetics, Fawwaz T. Ulaby, Umberto Ravaioli. Referred as Ulaby 
+
+  - [Class pictures link 1](https://www.dropbox.com/sh/mmwt50c62wx66n8/AAAk9syV4ZdBt49FdrQ1KfLya?dl=0)
+  
+  - [Class pictures link 2](https://drive.google.com/open?id=1poexgWhZUBpiSHl2aM6Wob38YJCyake8)
+
 
 **Install python 3 and pip**
  > sudo apt install python3 python3-pip

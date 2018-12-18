@@ -569,3 +569,12 @@ def TL_find_Cprime_epsilonAB(epsilon_r, a, b):
     
     Cprime = (2 * np.pi * epsilon) / np.log(b / a)
     return Cprime 
+
+############################################################################################################################### 
+## General case
+## Find lambda with beta. Class pictures, lection 3, board 3.
+def TL_find_lambda_beta(beta):
+    wavelenght = np.pi / beta
+    return wavelenght
+
+
