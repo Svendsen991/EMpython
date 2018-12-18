@@ -67,7 +67,7 @@ This python lib can be used freely but it's build for solving problems in course
 
       > Else returns error message
   
-  - getRightOrLeftPolH_field(H_0real, H_0imag, betaVec)
+  - ##### getRightOrLeftPolH_field(H_0real, H_0imag, betaVec)
 
      ###### Input
       > H_0real, H_0imag and betaVec are real vectors
