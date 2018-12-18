@@ -13,25 +13,30 @@ This python lib can be used freely but it's build for solving problems in course
 
 1. printJSON.py 
 
-  >Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
+  > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
   
-  - constants()
+  - **constants()**
 
-    **Prints constant table**
+    Prints constant table
   
-  - meterials()
+  - **meterials()**
 
-    **Prints material table**
+    Prints material table
 
-  - getMu_0()
+  - **getMu_0()**
 
-    **Returns mu zero**
+    Returns mu zero
 
-  - getEpsilon_0()
+  - **getEpsilon_0()**
 
-    **Returns epsilon zero**
+    Returns epsilon zero
+
+</br>
 
 2. functions.py
+
+  > 
+
   - getPolarization(E_0real, E_0imag)
 
     **Input**
