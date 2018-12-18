@@ -16,7 +16,7 @@ This python lib can be used freely but it's build for solving problems in course
 
 1. **printJSON.py**
 
-  > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
+    > Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
   
   - **constants()**
 
@@ -40,7 +40,7 @@ This python lib can be used freely but it's build for solving problems in course
 
 2. **functions.py**
 
-  > Helpful functions 
+    > Helpful functions 
 
   - getPolarization(E_0real, E_0imag)
 
