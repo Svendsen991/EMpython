@@ -120,12 +120,38 @@ def findMajorAndMinorSemiAxis(E_0real, E_0imag):
 ###############################################################################################################################
 ## Find betahat vector with E_field and H_field. Ulaby s. 369
 def find_betaHatVec_EfieldHfield(E_field, H_field):
-    if(np.dot(E_field, H_field)):
+    if(np.dot(E_field, H_field) == 0):
         cross = np.cross(E_field, H_field)
         betaHat = np.nan_to_num(np.divide(cross, np.abs(cross)))
         return betaHat
     else:
         return "Error E_field and H_field not perpendicular therefore not at valid wave."
+
+###############################################################################################################################
+## Find reflection coefficient (big Gamma) with Z_L and Z_0. Ulaby s. 90
+def find_GAMMA_ZLZ0(Z_L, Z_0):
+    GAMMA = (Z_L - Z_0) / (Z_L + Z_0)
+    return GAMMA
+
+###############################################################################################################################
+## Find Z_L with reflection coefficient and Z_0. Ulaby s. 90
+## If GAMMA is on polar form, pol needs to be True and GAMMA is magnitude and angle is angle. 
+## deg needs to be True if angle is in degrees.
+def find_ZL_GAMMAZ0(GAMMA, Z_0, pol=False, deg=False, angle=0):
+    if(pol):
+        if(deg):
+            angle = angle * np.pi / 180
+        GAMMA = GAMMA * np.exp(1.j * angle)
+    Z_L = -((Z_0 * (GAMMA + 1)) / (GAMMA - 1))
+    
+    return Z_L
+
+###############################################################################################################################
+## Find standing wave ratio (SWR) with reflection coefficient. Ulaby s. 94
+def find_SWR_GAMMA(GAMMA):
+    SWR = (1 + np.abs(GAMMA)) / (1 - np.abs(GAMMA))
+    return SWR
+
 
 ##                                                                                                              TE/TM polarization
 ###############################################################################################################################

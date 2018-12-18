@@ -154,8 +154,24 @@ This python lib can be used freely but it's build for solving problems in course
         - Plane-wave case !!**Only returns beta hat vector**!!
           
           > find_betaHatVec_EfieldHfield(E_field, H_field)
+    
+    2. #### Find reflection coefficient (big Gamma) with Z_L and Z_0. Ulaby s. 90
 
+        - Plane-wave case
+          
+          > find_GAMMA_ZLZ0(Z_L, Z_0)   
+        
+    3. #### Find standing wave ratio (SWR) with reflection coefficient. Ulaby s. 94 and Z_0. Ulaby s. 90
 
+        - Plane-wave case
+          
+          > find_SWR_GAMMA(GAMMA)
+
+    4. #### Find Z_L with reflection coefficient and Z_0. Ulaby s. 90 If GAMMA is on polar form, pol needs to be True and GAMMA is magnitude and angle is angle. deg needs to be True if angle is in degrees.
+
+        - Plane-wave case
+          
+          > find_ZL_GAMMAZ0(GAMMA, Z_0, pol=False, deg=False, angle=0)
 
   - #### getPolarization(E_0real, E_0imag)
 
