@@ -518,3 +518,14 @@ def TL_find_Up_epsilon(epsilon_r):
 def TL_find_Z0_LpCp(Lp, Cp):
     Z_0 = np.sqrt(Lp, Cp)
     return Z_0
+
+############################################################################################################################### 
+## Lossless coaxial
+## Find characteristic impedance Z_0 with epsilon, a (inner radius) and b (outer radius). Ulaby s. 89
+def TL_find_Z0_epsilonAB(epsilon_r, a, b):
+    epsilon_0 = printJSON.getEpsilon_0()
+    epsilon = epsilon_0 * epsilon_r
+    
+    Z_0 = 60 * np.sqrt(epsilon) * np.log(b / a) # OBS np.log is ln. 
+    return Z_0
+    
