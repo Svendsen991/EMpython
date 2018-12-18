@@ -47,7 +47,7 @@ This python lib can be used freely but it's build for solving problems in course
 
     > Helpful functions 
   
-  - #### Transmisionline
+  - #### Transmision line
 
     1. ##### Find characteristic impedance Z_0 with R', G', L', C' and omega. Ulaby s. 89
     
