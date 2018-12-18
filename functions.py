@@ -117,6 +117,15 @@ def findMajorAndMinorSemiAxis(E_0real, E_0imag):
 
     return major, minor, AR
 
+###############################################################################################################################
+## Find betahat vector with E_field and H_field
+def find_betaHatVec_EfieldHfield(E_field, H_field):
+    if(np.dot(E_field, H_field)):
+        cross = np.cross(E_field, H_field)
+        betaHat = np.nan_to_num(np.divide(cross, np.abs(cross)))
+        return betaHat
+    else:
+        return "Error E_field and H_field not perpendicular therefore not at valid wave."
 ##                                                                                                              TE/TM polarization
 ###############################################################################################################################
 ## Find TE or TM polarization

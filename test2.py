@@ -12,3 +12,6 @@ epsilon_zero = printJSON.getEpsilon_0()
 
 printJSON.constants()
 printJSON.meterials()
+
+
+print("BetaHat: ", func.find_betaHatVec_EfieldHfield([1,-1,1], [1,2,1]))
