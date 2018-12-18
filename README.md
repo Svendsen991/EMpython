@@ -12,6 +12,7 @@ This python lib can be used freely but it's build for solving problems in course
  > pip3 install numpy
 
 </br>
+
 ***
 
 1. ### printJSON.py
@@ -34,7 +35,6 @@ This python lib can be used freely but it's build for solving problems in course
 
     > Returns epsilon zero
 
-***
 
 </br>
 
