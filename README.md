@@ -147,7 +147,7 @@ This python lib can be used freely but it's build for solving problems in course
 
           > TL_find_Cprime_epsilonAB(epsilon_r, a, b)
     
-  - ### Plane wave propagation
+  - ### Plane-wave propagation
 
     1. #### Find betahat vector with E_field and H_field. Ulaby s. 369
 
