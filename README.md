@@ -11,7 +11,22 @@ This python lib can be used freely but it's build for solving problems in course
 **Install numpy**
 > pip3 install numpy
 
-1. functions.py
+1. printJSON.py 
+
+Print material table and constant table from Ulaby appendix B and FUNDAMENTAL PHYSICAL CONSTANTS
+  - constants()
+    **Prints constant table**
+  
+  - meterials()
+    **Prints material table**
+
+  - getMu_0()
+    **Returns mu zero**
+    
+  - getEpsilon_0()
+    **Returns epsilon zero**
+
+2. functions.py
   - getPolarization(E_0real, E_0imag)
 
     **Input**
