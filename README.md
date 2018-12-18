@@ -20,21 +20,22 @@ This python lib can be used freely but it's build for solving problems in course
   
   - ##### constants()
 
-    Prints constant table
+    > Prints constant table
   
   - ##### meterials()
 
-    Prints material table
+    > Prints material table
 
   - ##### getMu_0()
 
-    Returns mu zero
+    > Returns mu zero
 
   - ##### getEpsilon_0()
 
-    Returns epsilon zero
+    > Returns epsilon zero
 
 ***
+
 </br>
 
 
