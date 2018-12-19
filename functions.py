@@ -177,6 +177,13 @@ def TL_find_zL_GAMMA(GAMMA):
     zL = -((1 + GAMMA) / (GAMMA - 1))
     return zL
 
+###############################################################################################################################
+## Lossless
+## Find characteristic impedance with short- and opencircuit impedance. Ulaby s. 103
+def TL_find_Z0_ZscZoc(Zsc, Zoc):
+    Z0 = np.sqrt(Zsc * Zoc)
+    print(Zoc, Zsc, Z0)
+    return Z0
 
 ##                                                                                                              TE/TM polarization
 ###############################################################################################################################
@@ -637,6 +644,8 @@ def TL_find_Cprime_epsilonAB(epsilon_r, a, b):
 def TL_find_lambda_beta(beta):
     wavelenght = np.pi / beta
     return wavelenght
+
+# def TL_TWG
 
 ############################################################################################################################### 
 ## Wave reflection and transmission

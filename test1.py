@@ -135,7 +135,7 @@ mu_r_2 = 1
 sigma_2 = 0
 eta_2 = func.findInImLossLess(mu_r_2, epsilon_r_2)
 
-n_vector = [0, 10, 0]
+n_vector = [0, 1, 0]
 betaVec = [1, 2, 0]
 E_0 = [0, 0, 4]
 

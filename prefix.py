@@ -18,7 +18,7 @@ def M_mega():
     return 10**6
 
 def k_kilo():
-    return 10**6
+    return 10**3
 
 def m_milli():
     return 10**(-3)

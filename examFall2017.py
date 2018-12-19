@@ -4,6 +4,7 @@ import numpy as np
 
 import functions as func
 import printJSON
+printJSON.meterials()
 import prefix
 
 
@@ -88,8 +89,31 @@ print("Spørgsmål 14: angle2: ", angle2, "angle3: ", angle3)
 # Spørgsmål 20
 # F = q(E + v cross B) Ulaby s. 295. 
 
-# Spørgsmål 
-# Spørgsmål 
-# Spørgsmål 
+# Spørgsmål 21
+freq = 11 * prefix.G_giga()
+# Air 
+mu_r = 1
+epsilon_r = 1
 
-printJSON.meterials()
+lamb = func.findLambdaWaveLenght(freq, mu_r, epsilon_r)
+length = 3 * prefix.m_milli()
+print(length / lamb)
+print(1 * prefix.n_nano())
+
+print(1 * prefix.n_nano() * freq * 2 * np.pi)
+# Regn det sidste på smith chart
+# Zin = 11.3 OMH 36.2 grader
+
+
+# Spørgsmål 22 
+Zsc = 3.01 * 1.j
+Zoc = -1.44 * 1.j * prefix.k_kilo()
+
+Z_0 = func.TL_find_Z0_ZscZoc(Zsc, Zoc)
+print("Spørgsmål 22: Z_0", Z_0)
+
+
+
+
+
+# Spørgsmål 
