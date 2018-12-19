@@ -192,6 +192,35 @@ This python lib can be used freely but it's build for solving problems in course
           
           > find_ZL_GAMMAZ0(GAMMA, Z_0, pol=False, deg=False, angle=0)
 
+  - ### Wave reflection and transmission
+
+    1. #### Find reflection coefficient (GAMMA) with complex intrinsic impandance. Ulaby s. 379
+
+        - Normal incidence
+
+          > WRT_find_GAMMA_eta1eta2(eta1, eta2)
+
+    2. #### Find reflection coefficient (GAMMA) with intrinsic impandance. Ulaby s. 379
+
+        - Normal incidence
+
+          > WRT_find_GAMMA_eta1eta2(eta1, eta2)
+    
+    3. #### Find complex intrinsic impandance with mu_r, epsilon_r, sigma and omega. Ulaby s. 379
+
+        - Normal incidence !OBS! not tested
+
+          > WRT_find_eta_c_murEprSig(mu_r, epsilon_r, sigma, omega)
+
+    4. #### Find transmitting angle with n1, n2 (index of refraction) and incident angle. If deg=False radians is used. Ulaby s. 385
+
+        - Snell's law 
+
+          > def WRT_find_Tangle_n1n2Angle(n1, n2, angle)
+
+    
+
+
   - #### getPolarization(E_0real, E_0imag)
 
     ##### Input

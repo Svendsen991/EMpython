@@ -202,7 +202,7 @@ epsilon_r = 1
 mu_r = 1
 
 Lambda = func.findLambdaWaveLenght(freq, mu_r, epsilon_r)
-
 Prec = func.findReceivedPower_dB(transGain, recGain, Lambda, distance, powerOut)
+
 
 print("Received power: ", Prec)

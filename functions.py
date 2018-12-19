@@ -641,8 +641,35 @@ def TL_find_lambda_beta(beta):
 ############################################################################################################################### 
 ## Wave reflection and transmission
 ## Normal incidence
-## Find reflection coefficient (GAMMA) with intrinsic impandance. Ulaby s. 379
-def WRT_find_GAMMA_eta1eta2(eta1, eta2):
-    GAMMA = (eta2 - eta1) / (eta2 + eta1)
+## Find reflection coefficient (GAMMA) with complex intrinsic impandance. Ulaby s. 379
+def WRT_find_GAMMA_eta1eta2(eta1_c, eta2_c):
+    GAMMA = (eta2_c - eta1_c) / (eta2_c + eta1_c)
     return GAMMA
+
+############################################################################################################################### 
+## Normal incidence !OBS! not tested
+## Find complex intrinsic impandance with mu_r, epsilon_r, sigma and omega. Ulaby s. 379
+def WRT_find_eta_c_murEprSig(mu_r, epsilon_r, sigma, omega):
+    mu_0 = printJSON.getMu_0()
+    mu = mu_0 * mu_r
+    epsilon_0 = printJSON.getEpsilon_0()
+    epsilon = epsilon_0 * epsilon_r
+    epsilon_c_r = epsilon - 1.j * (sigma / (omega * epsilon_0))
+
+    eta_c = np.sqrt(mu * epsilon_c_r)
+    return eta_c
+
+############################################################################################################################### 
+## Snell's law 
+## Find transmitting angle with n1, n2 (index of refraction) and incident angle. If deg=False radians is used. Ulaby s. 385
+def WRT_find_Tangle_n1n2Angle(n1, n2, angle, deg=True):
+    if(deg):
+        rad = (angle * np.pi) / 180
+    else:
+        rad = angle    
+    del1 = n1 / n2
+    thetaT = np.arcsin(del1 * np.sin(rad))
+    if(deg):
+        thetaT = (thetaT * 180) / np.pi
+    return thetaT
 
