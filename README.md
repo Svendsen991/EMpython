@@ -147,6 +147,30 @@ This python lib can be used freely but it's build for solving problems in course
 
           > TL_find_Cprime_epsilonAB(epsilon_r, a, b)
     
+    13. #### Find standing wave ratio (SWR) with reflection coefficient. Ulaby s. 94
+
+        - General case
+          
+          > TL_find_SWR_GAMMA(GAMMA)
+
+    13. #### Find standing wave ratio (SWR) with  with V_min and V_max. Ulaby s. 94
+
+        - General case
+          
+          > TL_find_SWR_VminVmax(V_min, V_max)
+
+    14. #### Find reflection coefficient (GAMMA) abs value with only SWR. Ulaby s. 94
+
+        - General case
+          
+          > TL_find_absGAMMA_SWR(SWR)
+
+    15. #### Find normalized load impedance (z_L) with GAMMA. Ulaby s. 90
+
+        - General case
+          
+          > TL_find_zL_GAMMA(GAMMA)
+
   - ### Plane-wave propagation
 
     1. #### Find betahat vector with E_field and H_field. Ulaby s. 369
@@ -161,13 +185,8 @@ This python lib can be used freely but it's build for solving problems in course
           
           > find_GAMMA_ZLZ0(Z_L, Z_0)   
         
-    3. #### Find standing wave ratio (SWR) with reflection coefficient. Ulaby s. 94 and Z_0. Ulaby s. 90
-
-        - Plane-wave case
-          
-          > find_SWR_GAMMA(GAMMA)
-
-    4. #### Find Z_L with reflection coefficient and Z_0. Ulaby s. 90 If GAMMA is on polar form, pol needs to be True and GAMMA is magnitude and angle is angle. deg needs to be True if angle is in degrees.
+    
+    3. #### Find Z_L with reflection coefficient and Z_0. Ulaby s. 90 If GAMMA is on polar form, pol needs to be True and GAMMA is magnitude and angle is angle. deg needs to be True if angle is in degrees.
 
         - Plane-wave case
           

@@ -148,9 +148,31 @@ def find_ZL_GAMMAZ0(GAMMA, Z_0, pol=False, deg=False, angle=0):
 
 ###############################################################################################################################
 ## Find standing wave ratio (SWR) with reflection coefficient. Ulaby s. 94
-def find_SWR_GAMMA(GAMMA):
+def TL_find_SWR_GAMMA(GAMMA):
     SWR = (1 + np.abs(GAMMA)) / (1 - np.abs(GAMMA))
     return SWR
+
+###############################################################################################################################
+## Find standing wave ratio (SWR) with V_min and V_max. Ulaby s. 94
+def TL_find_SWR_VminVmax(V_min, V_max):
+    SWR = np.abs(V_max) / np.abs(V_min)
+    return SWR
+
+###############################################################################################################################
+## Find reflection coefficient (GAMMA) abs value with only SWR. Ulaby s. 94
+def TL_find_absGAMMA_SWR(SWR):
+    if(SWR < 0):
+        return "SWR needs to be larger or equal to one."
+    GAMMA = np.abs((SWR - 1) / (SWR + 1))
+    return GAMMA
+
+###############################################################################################################################
+## Find normalized load impedance (z_L) with GAMMA. Ulaby s. 90
+def TL_find_zL_GAMMA(GAMMA):
+    if(GAMMA < -1 or 1 < GAMMA):
+        return False, "GAMMA needs to be between -1 and 1."
+    zL = -((1 + GAMMA) / (GAMMA - 1))
+    return zL
 
 
 ##                                                                                                              TE/TM polarization
