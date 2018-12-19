@@ -644,7 +644,13 @@ def TL_find_lambda_beta(beta):
     wavelenght = np.pi / beta
     return wavelenght
 
-# def TL_TWG
+############################################################################################################################### 
+## Lossless case
+## Find beta with length of TL and short- and opencircuit impedance. Ulaby s. 103.
+def TL_find_beta_lenZscZoc(lenght, Zsc, Zoc):
+    sqrt = np.sqrt((-Zsc / Zoc))
+    beta = np.arctan2(sqrt) / lenght
+    return beta
 
 ############################################################################################################################### 
 ## Wave reflection and transmission

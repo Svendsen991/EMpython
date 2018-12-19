@@ -114,6 +114,9 @@ print("Spørgsmål 22: Z_0", Z_0)
 
 
 # Spørgsmål 23
+freq = 10 * prefix.M_mega()
+func.findOmega_Freq
 
+func.TL_find_Up_OmegaBeta(omega, beta)
 
 
