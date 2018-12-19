@@ -57,6 +57,21 @@ def getPolarization(E_0real, E_0imag):
         return "Elliptical polarized"
 
 ###############################################################################################################################
+## Find E wave polarization with E0 vector. Vector can also be complex. Lection 12 (9, 10, 11)
+def POL_find_polarization(E0_vector):
+    E_0real = np.real(E0_vector)
+    E_0imag = np.imag(E0_vector)
+    if(np.equal(E_0real, 0).all() and np.equal(E_0imag, 0).all()):
+            print("Both vectors can't be zero.")
+            return False ## Error
+    if(isWaveLinearPol(E_0real, E_0imag)):
+        return "Linear polarized"
+    elif(isWaveCircularPol(E_0real, E_0imag)):
+        return "Circular polarized"
+    else:
+        return "Elliptical polarized"
+
+###############################################################################################################################
 ## Only works with Electric field
 def getRightOrLeftPolE_field(E_0real, E_0imag, betaVec):
     cross = np.cross(E_0real, E_0imag)

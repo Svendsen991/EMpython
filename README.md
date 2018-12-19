@@ -230,7 +230,13 @@ This python lib can be used freely but it's build for solving problems in course
 
           > def WRT_find_Tangle_n1n2Angle(n1, n2, angle)
 
-    
+  - ### Wave polarization
+
+    1. #### Find E wave polarization with E0 vector. Vector can also be complex.  Lection 12 (9, 10, 11)
+
+        - Plane wave
+
+          >POL_find_polarization(E0_vector)
 
 
   - #### getPolarization(E_0real, E_0imag)

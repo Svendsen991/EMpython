@@ -122,4 +122,14 @@ beta = func.TL_find_beta_lenZscZoc(length, Zsc, Zoc)
 
 print("Spørgsmål 23: Up: ", func.TL_find_Up_OmegaBeta(omega, beta))
 
+# Spørgsmål 24
+E0real = [1, 3, 2]
+E0imag = [1, 3, 2]
 
+print("Spørgsmål 24: ", func.getPolarization(E0real, E0imag))
+
+# Spørgsmål 
+# Spørgsmål 
+# Spørgsmål 
+# Spørgsmål 
+# Spørgsmål 
