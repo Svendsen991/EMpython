@@ -176,6 +176,12 @@ This python lib can be used freely but it's build for solving problems in course
         - Lossless case
           
           > TL_find_Z0_ZscZoc(Zsc, Zoc)
+    
+    17. #### Find beta with length of TL and short- and opencircuit impedance. Ulaby s. 103.
+
+        - Lossless case
+          
+          > TL_find_beta_lenZscZoc(lenght, Zsc, Zoc)
 
   - ### Plane-wave propagation
 

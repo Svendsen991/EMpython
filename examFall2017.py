@@ -115,8 +115,11 @@ print("Spørgsmål 22: Z_0", Z_0)
 
 # Spørgsmål 23
 freq = 10 * prefix.M_mega()
-func.findOmega_Freq
+length = 15 * prefix.c_centi()
 
-func.TL_find_Up_OmegaBeta(omega, beta)
+omega = func.findOmega_Freq(freq)
+beta = func.TL_find_beta_lenZscZoc(length, Zsc, Zoc)
+
+print("Spørgsmål 23: Up: ", func.TL_find_Up_OmegaBeta(omega, beta))
 
 
