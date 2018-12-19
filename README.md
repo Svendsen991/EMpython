@@ -228,7 +228,7 @@ This python lib can be used freely but it's build for solving problems in course
 
         - Snell's law 
 
-          > def WRT_find_Tangle_n1n2Angle(n1, n2, angle)
+          > WRT_find_Tangle_n1n2Angle(n1, n2, angle)
 
   - ### Wave polarization
 
@@ -236,7 +236,15 @@ This python lib can be used freely but it's build for solving problems in course
 
         - Plane wave
 
-          >POL_find_polarization(E0_vector)
+          > POL_find_polarization(E0_vector)
+    
+  - ### Wave propagation
+
+    1. #### Find intrinsic impandance with mu_r, epsilon_r. Ulaby s. 357
+
+        - Lossless case
+
+          > WP_find_eta_murEpr(mu_r, epsilon_r)
 
 
   - #### getPolarization(E_0real, E_0imag)

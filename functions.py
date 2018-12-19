@@ -415,6 +415,11 @@ def findBeta(mu_r, epsilon_r, sigma, omega):
     beta = omega * (del1 * del2)**(1/2)
     return beta
 
+############################################################################################################################### 
+## Find beta with wavelength lambda
+def findBeta_lambda(waveLen):
+    beta = (2 * np.pi) / waveLen
+    return beta
 
 ############################################################################################################################### 
 ## Find surface risistance (R_s) with mu, sigma and frequency
@@ -689,6 +694,17 @@ def WRT_find_eta_c_murEprSig(mu_r, epsilon_r, sigma, omega):
     return eta_c
 
 ############################################################################################################################### 
+## Lossless case
+## Find intrinsic impandance with mu_r, epsilon_r. Ulaby s. 357
+def WP_find_eta_murEpr(mu_r, epsilon_r):
+    mu_0 = printJSON.getMu_0()
+    mu = mu_0 * mu_r
+    epsilon_0 = printJSON.getEpsilon_0()
+    epsilon = epsilon_0 * epsilon_r
+    eta = np.sqrt(mu / epsilon)
+    return eta
+
+############################################################################################################################### 
 ## Snell's law 
 ## Find transmitting angle with n1, n2 (index of refraction) and incident angle. If deg=False radians is used. Ulaby s. 385
 def WRT_find_Tangle_n1n2Angle(n1, n2, angle, deg=True):
@@ -701,4 +717,13 @@ def WRT_find_Tangle_n1n2Angle(n1, n2, angle, deg=True):
     if(deg):
         thetaT = (thetaT * 180) / np.pi
     return thetaT
+
+############################################################################################################################### 
+## Power lossless medium
+## Find power density with E field and intrinsic impidance (eta) Ulaby s. 366
+def POW_find_powerDensity_EfieldEta(Efield, eta):
+    Efield = np.linalg.norm(Efield)
+    S = Efield**2 / (2 * eta)
+    return S
+
 

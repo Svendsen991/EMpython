@@ -123,13 +123,31 @@ beta = func.TL_find_beta_lenZscZoc(length, Zsc, Zoc)
 print("Spørgsmål 23: Up: ", func.TL_find_Up_OmegaBeta(omega, beta))
 
 # Spørgsmål 24
+E0 = [1 + 1.j, 3 + 3.j, 2 + 2.j]
 E0real = [1, 3, 2]
 E0imag = [1, 3, 2]
 
 print("Spørgsmål 24: ", func.getPolarization(E0real, E0imag))
+print("Spørgsmål 24: ", func.POL_find_polarization(E0))
 
-# Spørgsmål 
-# Spørgsmål 
+# Spørgsmål 25
+lamb = 580 * prefix.n_nano()
+
+beta = func.findBeta_lambda(lamb)
+print("Spørgsmål 25: ", beta)
+
+# Spørgsmål 26
+
+## Air
+mu_r = 1
+epsilon_r = 1
+
+Efield = np.multiply(E0, 1)
+eta = func.WP_find_eta_murEpr(mu_r, epsilon_r)
+
+S = func.POW_find_powerDensity_EfieldEta(Efield, eta)
+print("Spørgsmål 26: ", S)
+
 # Spørgsmål 
 # Spørgsmål 
 # Spørgsmål 
