@@ -182,7 +182,6 @@ def TL_find_zL_GAMMA(GAMMA):
 ## Find characteristic impedance with short- and opencircuit impedance. Ulaby s. 103
 def TL_find_Z0_ZscZoc(Zsc, Zoc):
     Z0 = np.sqrt(Zsc * Zoc)
-    print(Zoc, Zsc, Z0)
     return Z0
 
 ##                                                                                                              TE/TM polarization

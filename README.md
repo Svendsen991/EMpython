@@ -171,6 +171,12 @@ This python lib can be used freely but it's build for solving problems in course
           
           > TL_find_zL_GAMMA(GAMMA)
 
+    16. #### Find characteristic impedance with short- and opencircuit impedance. Ulaby s. 103
+
+        - Lossless case
+          
+          > TL_find_Z0_ZscZoc(Zsc, Zoc)
+
   - ### Plane-wave propagation
 
     1. #### Find betahat vector with E_field and H_field. Ulaby s. 369

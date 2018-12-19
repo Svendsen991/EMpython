@@ -113,7 +113,7 @@ Z_0 = func.TL_find_Z0_ZscZoc(Zsc, Zoc)
 print("Spørgsmål 22: Z_0", Z_0)
 
 
+# Spørgsmål 23
 
 
 
-# Spørgsmål 
