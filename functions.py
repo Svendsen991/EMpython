@@ -2,7 +2,7 @@
 ##
 ##  Author:     Emil Svendsen
 ##  Date:       14/11-2018
-##  Last edit:  20/11-2018
+##  Last edit:  19/12-2018
 
 import numpy as np
 ## Get constants
@@ -673,6 +673,13 @@ def TL_find_beta_lenZscZoc(lenght, Zsc, Zoc):
     return beta
 
 ############################################################################################################################### 
+## General case
+## Find frequency with wavelength and phase velocity. Lection 3 (3).
+def TL_find_freq_lambdaUp(waveLen, Up):
+    freq = Up / waveLen
+    return freq
+
+############################################################################################################################### 
 ## Wave reflection and transmission
 ## Normal incidence
 ## Find reflection coefficient (GAMMA) with complex intrinsic impandance. Ulaby s. 379
@@ -681,16 +688,18 @@ def WRT_find_GAMMA_eta1eta2(eta1_c, eta2_c):
     return GAMMA
 
 ############################################################################################################################### 
-## Normal incidence !OBS! not tested
-## Find complex intrinsic impandance with mu_r, epsilon_r, sigma and omega. Ulaby s. 379
+## Normal incidence 
+## Find complex intrinsic impandance with mu_r, epsilon_r, sigma and omega. Ulaby s. 357
 def WRT_find_eta_c_murEprSig(mu_r, epsilon_r, sigma, omega):
     mu_0 = printJSON.getMu_0()
     mu = mu_0 * mu_r
     epsilon_0 = printJSON.getEpsilon_0()
     epsilon = epsilon_0 * epsilon_r
-    epsilon_c_r = epsilon - 1.j * (sigma / (omega * epsilon_0))
+    sqrt1 = np.sqrt(mu / epsilon)
+    del1 = (sigma/omega) / epsilon
+    sqrt2 = (1 - 1.j * del1)**(-0.5)
 
-    eta_c = np.sqrt(mu * epsilon_c_r)
+    eta_c = sqrt1 * sqrt2
     return eta_c
 
 ############################################################################################################################### 
@@ -717,6 +726,90 @@ def WRT_find_Tangle_n1n2Angle(n1, n2, angle, deg=True):
     if(deg):
         thetaT = (thetaT * 180) / np.pi
     return thetaT
+
+############################################################################################################################### 
+## Snell's law 
+## Find transmitting angle with eta1, eta2 (intrinsic impedance) and incident angle. If deg=False radians is used. Ulaby s. 385
+def WRT_find_Tangle_eta1eta2Angle(eta1, eta2, angle, deg=True):
+    if(deg):
+        rad = (angle * np.pi) / 180
+    else:
+        rad = angle    
+    del1 = eta2 / eta1
+    thetaT = np.arcsin(del1 * np.sin(rad))
+    if(deg):
+        thetaT = (thetaT * 180) / np.pi
+    return thetaT
+
+############################################################################################################################### 
+## Snell's law 
+## Find phase velocity with refraction index (n). Ulaby s. 385
+def WRT_find_Up_n(n):
+    c = printJSON.getSpeedOfLight()
+    Up = c / n
+    return Up
+
+############################################################################################################################### 
+## General case 
+## Find reflectivity with reflection coeficient (GAMMA) Ulaby s. 400
+def WRT_find_R_GAMMA(GAMMA):
+    R = np.abs(GAMMA)**2
+    return R
+
+############################################################################################################################### 
+## General case 
+## Find transmissivity with reflectivity Ulaby s. 400
+def WRT_find_T_R(R):
+    T = 1 - R
+    return T
+
+############################################################################################################################### 
+## Perpendicular case 
+## Find GAMMA perpendicular with eta1, eta2 and angle Ulaby s. 400
+def WRT_find_GAMMAperpen_eta1eta2Angle(eta1, eta2, angle, deg=True):
+    if(deg):
+        rad = (angle * np.pi) / 180
+    else:
+        rad = angle
+    thetaT = WRT_find_Tangle_eta1eta2Angle(eta1, eta2, rad, deg=False)
+    num = eta2 * np.cos(rad) - eta1 * np.cos(thetaT)
+    denum = eta2 * np.cos(rad) + eta1 * np.cos(thetaT)
+    GAMMA = num / denum
+    return GAMMA
+
+############################################################################################################################### 
+## Parallel case 
+## Find GAMMA parallel with eta1, eta2 and angle Ulaby s. 400
+def WRT_find_GAMMAparallel_eta1eta2Angle(eta1, eta2, angle, deg=True):
+    if(deg):
+        rad = (angle * np.pi) / 180
+    else:
+        rad = angle
+    thetaT = WRT_find_Tangle_eta1eta2Angle(eta1, eta2, rad, deg=False)
+    num = eta2 * np.cos(thetaT) - eta1 * np.cos(rad)
+    denum = eta2 * np.cos(thetaT) + eta1 * np.cos(rad)
+    GAMMA = num / denum
+    return GAMMA
+
+############################################################################################################################### 
+## Parallel case 
+## Find Brewster angle parallel with eta1, eta2, epsilon1 and epsilon2 Lection 19 (7)
+def WRT_find_BrewAngleParallel_eta1eta2ep1ep2(eta1, eta2, epsilon1, epsilon2):
+    num = 1 - (eta2 / eta1)**2
+    denum = 1 - (epsilon1 / epsilon2)
+    sqrt = np.sqrt(num / denum)
+    Bangle = np.arcsin(sqrt)
+    return Bangle
+
+############################################################################################################################### 
+## Perpendicular case 
+## Find Brewster angle perpendicular with eta1, eta2, mu1 and mu2 Lection 19 (7)
+def WRT_find_BrewAnglePerpen_eta1eta2mu1mu2(eta1, eta2, mu1, mu2):
+    num = 1 - (eta1 / eta2)**2
+    denum = 1 - (mu1 / mu2)
+    sqrt = np.sqrt(num / denum)
+    Bangle = np.arcsin(sqrt)
+    return Bangle
 
 ############################################################################################################################### 
 ## Power lossless medium
