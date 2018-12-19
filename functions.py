@@ -125,7 +125,8 @@ def find_betaHatVec_EfieldHfield(E_field, H_field):
         betaHat = np.nan_to_num(np.divide(cross, np.abs(cross)))
         return betaHat
     else:
-        return "Error E_field and H_field not perpendicular therefore not at valid wave."
+        print("Error E_field and H_field not perpendicular therefore not at valid wave.")
+        return False
 
 ###############################################################################################################################
 ## Find reflection coefficient (big Gamma) with Z_L and Z_0. Ulaby s. 90
@@ -162,7 +163,8 @@ def TL_find_SWR_VminVmax(V_min, V_max):
 ## Find reflection coefficient (GAMMA) abs value with only SWR. Ulaby s. 94
 def TL_find_absGAMMA_SWR(SWR):
     if(SWR < 0):
-        return "SWR needs to be larger or equal to one."
+        print("SWR needs to be larger or equal to one.")
+        return -1
     GAMMA = np.abs((SWR - 1) / (SWR + 1))
     return GAMMA
 
@@ -170,7 +172,8 @@ def TL_find_absGAMMA_SWR(SWR):
 ## Find normalized load impedance (z_L) with GAMMA. Ulaby s. 90
 def TL_find_zL_GAMMA(GAMMA):
     if(GAMMA < -1 or 1 < GAMMA):
-        return False, "GAMMA needs to be between -1 and 1."
+        print("GAMMA needs to be between -1 and 1.")
+        return -1
     zL = -((1 + GAMMA) / (GAMMA - 1))
     return zL
 
@@ -635,4 +638,11 @@ def TL_find_lambda_beta(beta):
     wavelenght = np.pi / beta
     return wavelenght
 
+############################################################################################################################### 
+## Wave reflection and transmission
+## Normal incidence
+## Find reflection coefficient (GAMMA) with intrinsic impandance. Ulaby s. 379
+def WRT_find_GAMMA_eta1eta2(eta1, eta2):
+    GAMMA = (eta2 - eta1) / (eta2 + eta1)
+    return GAMMA
 

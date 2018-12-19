@@ -33,7 +33,7 @@ print("Spørgsmål 6: absGAMMA: ", absGAMMA)
 
 # Spørgsmål 7
 z_L1 = func.TL_find_zL_GAMMA(absGAMMA)
-z_L2 = func.TL_find_zL_GAMMA(-absGAMMA)
+z_L2 = func.TL_find_zL_GAMMA(-1 * absGAMMA)
 Z_0 = 75 # Ved ikke hvad Z_0 er, men det kunne være 50 OHM
 Z_L1 = Z_0 * z_L1
 Z_L2 = Z_0 * z_L2
@@ -51,8 +51,12 @@ print("Spørgsmål 7: Z_L1: ", Z_L1, "Z_L2: ", Z_L2)
 # Spørgsmål 11
 # lambda / 8
 
-# Spørgsmål 
-# Spørgsmål 
+# Spørgsmål 9
+# Billede nr. 1
+
+# Spørgsmål 10
+
+
 # Spørgsmål 
 # Spørgsmål 
 # Spørgsmål 
