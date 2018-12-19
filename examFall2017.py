@@ -36,7 +36,7 @@ print("Spørgsmål 6: absGAMMA: ", absGAMMA)
 # Spørgsmål 7
 z_L1 = func.TL_find_zL_GAMMA(absGAMMA)
 z_L2 = func.TL_find_zL_GAMMA(-1 * absGAMMA)
-Z_0 = 75 # Ved ikke hvad Z_0 er, men det kunne være 50 OHM
+Z_0 = 50 # Ved ikke hvad Z_0 er, men det kunne være 50 OHM
 Z_L1 = Z_0 * z_L1
 Z_L2 = Z_0 * z_L2
 print("Spørgsmål 7: Z_L1: ", Z_L1, "Z_L2: ", Z_L2)
@@ -148,6 +148,10 @@ eta = func.WP_find_eta_murEpr(mu_r, epsilon_r)
 S = func.POW_find_powerDensity_EfieldEta(Efield, eta)
 print("Spørgsmål 26: ", S)
 
-# Spørgsmål 
+# Spørgsmål 27
+freq = 1 * prefix.G_giga()
+# glass
+mu
+
 # Spørgsmål 
 # Spørgsmål 
